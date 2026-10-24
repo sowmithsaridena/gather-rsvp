@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gather — invitations made personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Gather home">gather<span>·</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#themes">Themes</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#rsvp">Guest RSVP</a>
+      </nav>
+      <button class="header-cta" id="host-login">Host sign in <span>↗</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> invitations with a point of view</p>
+          <h1 id="hero-title">The celebration<br />starts <em>before</em><br />they arrive.</h1>
+          <p class="hero-description">Choose a mood, make it yours, and send an RSVP page your guests will genuinely want to open.</p>
+          <div class="hero-actions">
+            <button class="primary-button" data-scroll="#create">Start an invitation <span>→</span></button>
+            <button class="text-button" data-scroll="#themes">Explore themes <span>↓</span></button>
+          </div>
+          <div class="social-proof">
+            <div class="avatars" aria-label="Event hosts">
+              <span class="avatar a1">M</span><span class="avatar a2">A</span><span class="avatar a3">N</span><span class="avatar a4">J</span>
+            </div>
+            <p><strong>12,000+</strong> beautiful gatherings<br />started this month</p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Sample invitation for an Indian wedding">
+          <div class="arch arch-back"></div>
+          <div class="arch arch-front"></div>
+          <div class="sun"></div>
+          <div class="flower flower-one">✦</div>
+          <div class="flower flower-two">✦</div>
+          <div class="flower flower-three">✦</div>
+          <article class="invitation-card wedding-card">
+            <p class="invite-kicker">with love &amp; joy</p>
+            <h2>Aarav<br /><i>&amp;</i> Meera</h2>
+            <div class="card-rule"></div>
+            <p class="card-date">SATURDAY · 18 OCTOBER · 2026</p>
+            <p class="card-location">The Garden House · Sonoma, CA</p>
+            <span class="card-mark">✦</span>
+          </article>
+          <p class="theme-label"><span></span> Indian wedding</p>
+        </div>
+      </section>
+
+      <section class="theme-section" id="themes" aria-labelledby="themes-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> your kind of celebration</p>
+            <h2 id="themes-title">Pick the feeling first.</h2>
+          </div>
+          <p>Every theme comes with a cohesive invitation, RSVP page, and all the little details that make it feel considered.</p>
+        </div>
+        <div class="theme-grid" role="list">
+          <button class="theme-tile active" data-theme="wedding" role="listitem" aria-pressed="true">
+            <span class="theme-art wedding-art"><i></i><b>✦</b><em>❋</em></span>
+            <span class="theme-number">01</span><span class="theme-name">Indian wedding</span><span class="tile-arrow">↗</span>
+          </button>
+          <button class="theme-tile" data-theme="halloween" role="listitem" aria-pressed="false">
+            <span class="theme-art halloween-art"><i>☾</i><b>✦</b><em>⌁</em></span>
+            <span class="theme-number">02</span><span class="theme-name">Halloween night</span><span class="tile-arrow">↗</span>
+          </button>
+          <button class="theme-tile" data-theme="birthday" role="listitem" aria-pressed="false">
+            <span class="theme-art birthday-art"><i>●</i><b>●</b><em>●</em></span>
+            <span class="theme-number">03</span><span class="theme-name">Baby's birthday</span><span class="tile-arrow">↗</span>
+          </button>
+          <button class="theme-tile" data-theme="shower" role="listitem" aria-pressed="false">
+            <span class="theme-art shower-art"><i>♡</i><b>✿</b><em>♡</em></span>
+            <span class="theme-number">04</span><span class="theme-name">Baby shower</span><span class="tile-arrow">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="maker-section" id="create" aria-labelledby="maker-title">
+        <div class="maker-intro">
+          <p class="eyebrow"><span></span> build your moment</p>
+          <h2 id="maker-title">Make it feel<br /><em>like you.</em></h2>
+          <p>Start with a theme, then add your details. Your live invite changes as you do.</p>
+          <div class="step-list" aria-label="Invitation creation steps">
+            <div class="step active-step"><span>1</span><p><strong>Choose your theme</strong><small>Set the visual mood</small></p></div>
+            <div class="step"><span>2</span><p><strong>Add event details</strong><small>Date, place, and occasion</small></p></div>
+            <div class="step"><span>3</span><p><strong>Share &amp; celebrate</strong><small>Keep all your RSVPs in one place</small></p></div>
+          </div>
+        </div>
+        <div class="builder-shell">
+          <div class="builder-bar"><span class="builder-dot red"></span><span class="builder-dot yellow"></span><span class="builder-dot green"></span><p>your-gather.page</p><span class="lock">⌁</span></div>
+          <div class="builder-content">
+            <form class="event-form" id="event-form">
+              <label class="form-label">Your event theme</label>
+              <div class="theme-choices" role="radiogroup" aria-label="Your event theme">
+                <button type="button" class="choice selected" data-choice="wedding" role="radio" aria-checked="true"><span>✦</span> Indian wedding</button>
+                <button type="button" class="choice" data-choice="halloween" role="radio" aria-checked="false"><span>☾</span> Halloween night</button>
+                <button type="button" class="choice" data-choice="birthday" role="radio" aria-checked="false"><span>●</span> Baby's birthday</button>
+                <button type="button" class="choice" data-choice="shower" role="radio" aria-checked="false"><span>♡</span> Baby shower</button>
+              </div>
+              <label for="event-name">What are you celebrating?</label>
+              <input id="event-name" maxlength="40" value="Aarav & Meera's wedding" />
+              <div class="input-row">
+                <div><label for="event-date">Date</label><input id="event-date" type="text" value="October 18, 2026" /></div>
+                <div><label for="event-place">Location</label><input id="event-place" type="text" value="Sonoma, CA" /></div>
+              </div>
+              <button type="button" class="primary-button create-button" id="create-invite">Create invitation <span>→</span></button>
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+            <div class="preview-wrap">
+              <p class="preview-label">Live preview <span>●</span></p>
+              <article class="live-card theme-wedding" id="live-card">
+                <div class="card-decoration deco-left">✦</div><div class="card-decoration deco-right">✦</div>
+                <p id="preview-kicker">together with their families</p>
+                <h3 id="preview-title">Aarav <i>&amp;</i> Meera</h3>
+                <div class="preview-rule"></div>
+                <p id="preview-date">SUNDAY · OCTOBER 18 · 2026</p>
+                <p id="preview-place">THE GARDEN HOUSE · SONOMA, CA</p>
+                <button type="button" id="rsvp-trigger">RSVP</button>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rsvp-section" id="rsvp">
+        <p class="eyebrow light"><span></span> for your guests</p>
+        <h2>A thoughtful yes<br />is only a tap away.</h2>
+        <p>Simple RSVP collection, dietary notes, plus-one details, and a beautiful thank-you experience—built in.</p>
+        <button class="cream-button" data-scroll="#create">Make your invitation <span>→</span></button>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#top">gather<span>·</span></a><p>Made for moments worth showing up for.</p><p>© 2026 Gather</p></footer>
+    <dialog id="rsvp-dialog">
+      <button class="close-dialog" aria-label="Close RSVP form">×</button>
+      <p class="eyebrow"><span></span> you're invited</p>
+      <h2 id="dialog-title">Aarav &amp; Meera</h2>
+      <p id="dialog-detail">Sunday · October 18 · Sonoma, CA</p>
+      <div class="attendance-options"><button class="attending selected">Joyfully accepts</button><button class="attending">Regretfully declines</button></div>
+      <button class="primary-button" id="submit-rsvp">Send RSVP <span>→</span></button>
+      <p id="rsvp-confirmation" aria-live="polite"></p>
+    </dialog>
+    <dialog id="account-dialog" class="account-dialog">
+      <button class="close-dialog" aria-label="Close account form">×</button>
+      <p class="eyebrow"><span></span> host workspace</p>
+      <h2>Keep every gathering together.</h2>
+      <p>Create a simple host profile to manage invitations, guest replies, and reminders.</p>
+      <label for="host-name">Your name</label>
+      <input id="host-name" placeholder="e.g. Meera Patel" autocomplete="name" />
+      <label for="host-email">Email address</label>
+      <input id="host-email" placeholder="you@example.com" type="email" autocomplete="email" />
+      <button class="primary-button" id="continue-account">Continue to my events <span>→</span></button>
+      <p class="account-note">Demo mode saves this profile only in this browser.</p>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
