@@ -25,6 +25,7 @@ function renderEvent() {
     setText('#event-info', 'Create an invitation to begin collecting RSVPs.');
     ['#reply-number', '#guest-number', '#accepted-count', '#maybe-count', '#awaiting-count', '#meal-count', '#unreplied-count'].forEach(id => setText(id, '0'));
     document.querySelector('#guest-rows').innerHTML = '<div class="table-row"><span class="guest-name">No guests yet<small>Create an event, then invite your people.</small></span><span>—</span><span>—</span></div>';
+    document.querySelector('#guest-link-output').hidden = true;
     return;
   }
 
@@ -92,8 +93,18 @@ async function bootstrap() {
 document.querySelector('#copy-link').addEventListener('click', async event => {
   const current = selectedEvent();
   if (!current) return;
-  await navigator.clipboard?.writeText(`${window.location.origin}/rsvp.html?event=${current.invite_code}`);
-  event.currentTarget.textContent = 'Link copied!';
+  const guestLink = `${window.location.origin}/rsvp.html?event=${current.invite_code}`;
+  const output = document.querySelector('#guest-link-output');
+  const anchor = document.querySelector('#guest-link-anchor');
+  anchor.href = guestLink;
+  anchor.textContent = guestLink;
+  output.hidden = false;
+  try {
+    await navigator.clipboard.writeText(guestLink);
+    event.currentTarget.textContent = 'Link copied!';
+  } catch {
+    event.currentTarget.textContent = 'Link ready below';
+  }
   setTimeout(() => event.currentTarget.textContent = 'Copy guest link', 1600);
 });
 const reminder = document.querySelector('#reminder-dialog');
