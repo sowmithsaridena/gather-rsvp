@@ -157,14 +157,19 @@
       <button class="close-dialog" aria-label="Close account form">×</button>
       <p class="eyebrow"><span></span> host workspace</p>
       <h2>Keep every gathering together.</h2>
-      <p>Create a simple host profile to manage invitations, guest replies, and reminders.</p>
+      <p>Create a host account to manage invitations, guest replies, and reminders.</p>
       <label for="host-name">Your name</label>
       <input id="host-name" placeholder="e.g. Meera Patel" autocomplete="name" />
       <label for="host-email">Email address</label>
       <input id="host-email" placeholder="you@example.com" type="email" autocomplete="email" />
-      <button class="primary-button" id="continue-account">Continue to my events <span>→</span></button>
-      <p class="account-note">Demo mode saves this profile only in this browser.</p>
+      <label for="host-password">Password</label>
+      <input id="host-password" placeholder="At least 6 characters" type="password" minlength="6" autocomplete="new-password" />
+      <button class="primary-button" id="continue-account">Create my account <span>→</span></button>
+      <button class="text-button account-switch" id="switch-account-mode" type="button">Already have an account? Sign in</button>
+      <p class="account-note" id="account-note" aria-live="polite">We’ll send a confirmation email before your account becomes active.</p>
     </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
