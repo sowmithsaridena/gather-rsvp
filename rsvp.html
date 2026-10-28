@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP — Gather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="rsvp.css" />
+  </head>
+  <body>
+    <main class="rsvp-page">
+      <a class="brand" href="index.html">gather<span>·</span></a>
+      <section class="rsvp-card" id="invite-card" aria-live="polite">
+        <p class="eyebrow"><span></span> you're invited</p>
+        <p class="invite-kicker" id="invite-theme">A gathering to remember</p>
+        <h1 id="event-title">Loading your invitation…</h1>
+        <p class="event-detail" id="event-detail"></p>
+        <p class="host-message" id="host-message"></p>
+        <form id="rsvp-form" hidden>
+          <div class="field-row"><label for="guest-name">Your name</label><input id="guest-name" required autocomplete="name" /></div>
+          <div class="field-row"><label for="guest-email">Email address</label><input id="guest-email" required type="email" autocomplete="email" /></div>
+          <fieldset><legend>Will you be there?</legend><div class="response-grid"><label><input type="radio" name="response" value="attending" checked /> Joyfully accepts</label><label><input type="radio" name="response" value="maybe" /> Maybe</label><label><input type="radio" name="response" value="not_attending" /> Regretfully declines</label></div></fieldset>
+          <div class="field-row"><label for="party-size">How many are coming?</label><select id="party-size"><option value="1">Just me</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option></select></div>
+          <div class="field-row"><label for="dietary-notes">Dietary notes <small>(optional)</small></label><input id="dietary-notes" /></div>
+          <div class="field-row"><label for="note-to-host">A note for your host <small>(optional)</small></label><textarea id="note-to-host" rows="3"></textarea></div>
+          <button class="submit-button" type="submit">Send RSVP <span>→</span></button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="supabase.js?v=20261027b"></script>
+    <script src="rsvp.js?v=20261027"></script>
+  </body>
+</html>

@@ -92,7 +92,7 @@ async function bootstrap() {
 document.querySelector('#copy-link').addEventListener('click', async event => {
   const current = selectedEvent();
   if (!current) return;
-  await navigator.clipboard?.writeText(`${window.location.origin}/?event=${current.invite_code}`);
+  await navigator.clipboard?.writeText(`${window.location.origin}/rsvp.html?event=${current.invite_code}`);
   event.currentTarget.textContent = 'Link copied!';
   setTimeout(() => event.currentTarget.textContent = 'Copy guest link', 1600);
 });
